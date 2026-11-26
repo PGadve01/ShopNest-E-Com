@@ -20,19 +20,10 @@ npm run install-all
 
 Copy `backend/.env.example` to `backend/.env`, then set the values for your machine and services. Keep the real `.env` file private; it is ignored by Git.
 
-For a local MongoDB installation, use a URI such as:
-
-```text
-mongodb://127.0.0.1:27017/shopnest-mern
-```
 
 Set a private `JWT_SECRET`. Configure Cloudinary, email, or payment credentials only if you use those features. Never put backend credentials in frontend files or commit them to GitHub.
 
-The frontend development server uses port `5000` from `frontend/.env`. The backend uses port `5001` from `backend/.env`; the frontend's development proxy forwards `/api` requests to it. Create `frontend/.env` with:
 
-```text
-PORT=5000
-```
 
 ## Run in development
 
@@ -42,7 +33,6 @@ Start MongoDB, then run from the project root:
 npm run dev
 ```
 
-Open [http://localhost:5000](http://localhost:5000). The backend API runs at `http://localhost:5001`.
 
 ## Build and run as a single server
 
@@ -55,8 +45,6 @@ npm --prefix frontend run build
 Then start the backend in production mode from PowerShell:
 
 ```powershell
-cd backend
-$env:NODE_ENV = "production"
 npm start
 ```
 
